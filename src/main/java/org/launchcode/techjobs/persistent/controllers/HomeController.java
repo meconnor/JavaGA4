@@ -36,7 +36,7 @@ public class HomeController {
     public String index(Model model) {
 
         model.addAttribute("title", "MyJobs");
-        List jobs = (List<Job>) jobRepository.findAll();
+        List<Job> jobs = (List<Job>) jobRepository.findAll();
         model.addAttribute("jobs", jobs);
         return "index";
     }
@@ -45,9 +45,9 @@ public class HomeController {
     public String displayAddJobForm(Model model) {
 	model.addAttribute("title", "Add Job");
         model.addAttribute(new Job());
-        List employers = (List<Employer>) employerRepository.findAll();
+        List<Employer> employers = (List<Employer>) employerRepository.findAll();
         model.addAttribute("employers", employers);
-        List skills = (List<Skill>) skillRepository.findAll();
+        List<Skill> skills = (List<Skill>) skillRepository.findAll();
         model.addAttribute("skills", skills);
         return "add";
     }
@@ -58,7 +58,7 @@ public class HomeController {
 
         if (errors.hasErrors()) {
 	    model.addAttribute("title", "Add Job");
-        List employers = (List<Employer>) employerRepository.findAll();
+        List<Employer> employers = (List<Employer>) employerRepository.findAll();
             return "add";
         }
 

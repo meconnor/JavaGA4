@@ -1,5 +1,6 @@
 --Part 1
--- id (int PK), employer (varchar255), name (varchar255), skills (varchar255)
+-- List the columns and their respective data types in the job table that was created
+-- id (int PK), employer (varchar255), name (varchar255), skill/s (varchar255)
 --Part 2
 SELECT name
  FROM employer
