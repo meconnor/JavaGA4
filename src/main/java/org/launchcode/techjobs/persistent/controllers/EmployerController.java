@@ -40,7 +40,7 @@ public class EmployerController {
         if (errors.hasErrors()) {
             return "employers/add";
         }
-        employerRepository.save(newEmployer);
+        employerRepository.save(newEmployer); //saves valid Object
         return "redirect:";
     }
 
